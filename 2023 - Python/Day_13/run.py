@@ -5,7 +5,6 @@ from enum import Enum
 from abc import ABC, abstractmethod
 import numpy as np
 
-Surface = Enum("Surface", ["ash", "rock"])
 Symmetry = Enum("Symmetry", ["horizontal", "vertical"])
 
 # %%
@@ -17,7 +16,6 @@ class MirrorAbstract(ABC):
     def from_string(cls, string: str):
         pattern = []
         for line in string.strip().splitlines():
-            # row = [Surface.rock if char == '#' else Surface.ash for char in line]
             row = [0 if char == '#' else 1 for char in line]
             pattern.append(row)
 

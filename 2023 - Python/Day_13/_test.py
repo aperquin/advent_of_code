@@ -1,4 +1,5 @@
-from run import Mirror, Mirror2, Symmetry, np
+from run import Mirror, Mirror2, Symmetry
+import numpy as np
 
 example_1 = """#.##..##.
 ..#.##.#.
